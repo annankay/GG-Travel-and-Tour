@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About GG Capital Travel and Tours</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+    *{
+        margin: 0px; padding: 0px; 
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif; 
+        /* text-align: center; */
+        color:#000000;
+        Line-height: 1.5;
+        Letter-spacing: 1px;
+    }
+    .wrapper {
+      min-height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/assets/images/toronto.jpg');
+      background-position: center; 
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .testimonial {
+        padding: 30px 100px;
+}
+    article h1{
+        font-size: 50px; 
+        font-weight: 800; 
+        text-transform: uppercase;
+    }
+
+    article h1:after{
+        content:""; 
+        height: 5px; 
+        width:225px;
+        background-color: #fff; 
+        display: block;
+        margin: auto;
+    }
+
+    .blogs{
+      background: white;
+      color: black;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      height: 300px;
+    }
+  .blogs h2{
+    cursor: default;
+  }
+
+  .container{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows:100px 300px;
+    grid-gap:10px;
+    grid-auto-flow: dense;
+}
+
+.gallery-item{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.gallery-item .image{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.gallery-item .image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position:50% 50%;
+    cursor:pointer;
+    transition:.5s ease-in-out;
+}
+.gallery-item:hover .image img{
+    transform:scale(1.5);
+}
+
+.gallery-item .text{
+    opacity:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-size:25px;
+    pointer-events:none;
+    z-index:4;
+    transition: .3s ease-in-out;
+    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.gallery-item:hover .text{
+    opacity:1;
+    animation: move-down .3s linear;
+    padding:1em;
+    width:100%;
+}
+
+.w-1{
+    grid-column: span 1;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-4{
+    grid-column: span 4;
+}
+.w-5{
+    grid-column: span 5;
+}
+.w-6{
+    grid-column: span 6;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+.h-4{
+    grid-row: span 4;
+}
+.h-5{
+    grid-row: span 5;
+}
+.h-6{
+    grid-row: span 6;
+}
+
+
+@media screen and (max-width:500px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+        grid-column:span 1;
+    }
+}
+
+
+@keyframes move-down{
+
+    0%{
+        top:10%;
+    }
+    50%{
+        top:35%;
+    }
+    100%{
+        top:50%;
+    }
+}
+
+.abouts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px; /* Add margin around the container */
+}
+
+.core-objs, .about-containers, .bus-phil, .target-audience {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+    margin: 10px; /* Space between cards */
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Inner padding for content */
+    transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+.core-objs:hover, .about-containers:hover, .bus-phil:hover, .target-audience:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+h4, h5 {
+    color: #7b2cbf; /* Consistent color for headings */
+}
+
+@media (max-width: 768px) {
+    .abouts-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+    }
+}
+
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html" class="logo">
+            <img style="height: 75px" src="assets/logo.jpg" alt="logo" /><span
+              style="color: #7b2cbf">
+          </span>
+          <span style="color: #6b7280"></span>
+        </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/About.html" style="color: #7b2cbf">About</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <!-- <li><a href="#client">Clients</a></li> -->
+      </ul>
+    </nav>
+
+    <header class="header" id="home" >
+      <!-- <div class="section__container header__container">
+        <h1 style="color: #7b2cbf;">TRAVELLER<br /><span>FOR LIFE.</span></h1>
+        <p style="color: #b1b8c5;">Live your best moments</p>
+        <form action="/">
+          <div class="input__group">
+            <span><i class="ri-map-2-fill" style="color: purple;"></i></span>
+            <input type="text" placeholder="Where are you going?" />
+          </div>
+          <div class="input__group">
+            <span><i class="ri-map-pin-2-fill" style="color: purple;"></i></span>
+            <input type="text" placeholder="Location" />
+          </div>
+          <div class="input__group">
+            <span><i class="ri-list-ordered-2" style="color: purple; font-weight: bold;"></i></span>
+            <input type="text" placeholder="Tour type" style="color: #7b2cbf;" />
+          </div>
+          <div class="input__group">
+            <button class="btn">Search</button>
+          </div>
+        </form>
+      </div> -->
+      <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img style="width: 800px;" src="/assets/images/dubia.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img style="width: 800px;" src="/assets/images/toronto.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img style="width: 800px;" src="/assets/images/sydney.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-item">
+            <img style="width: 800px;" src="/assets/images/seoul.jpg" class="d-block w-100" alt="..."> -->
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="hero-txt">
+                <h1 style="color: white;">TRAVELLER<br /><span style="color: #fff;">FOR LIFE.</span></h1>
+                <p style="color: #b1b8c5;">Live your best moments</p>  
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img style="width: 800px; height: 550px;" src="/assets/images/new Seoul.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img style="width: 800px; height: 550px;" src="/assets/images/new Dubai.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img style="width: 800px; height: 550px;" src="/assets/images/new Toronto.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="abouts-container">
+        <h2>About <span style="color: #7b2cbf;">GG Capital</span> Travel and Tours</h2>
+          <p>GG Capital Travel and Tours is Ghana's foremost travel facilitator, offering unparalleled travel experiences to global visitors. We prioritize customer-centric, expertly managed services that surpass expectations.</p>
+        <div class="core-objs">
+          <h5>Core Objective</h5>
+          <p>
+            To emerge as the premier tourism enterprise in Ghana and the surrounding region,
+             distinguished by financial stability, customer focus,
+              and exceptional management.
+          </p>
+          </div>
+          <div class="about-containers">
+            <h4>
+              Strategic Vision
+            </h4>
+            <p>GG Capital Travel and Tours seeks to specialize in immersive, social, and educational travel experiences in Ghana through:</p>
+            <ol>
+              <li>Fostering tourism initiatives in educational institutions, workplaces, communities, and organizations.</li>
+              <li>Promoting Ghana's tourism attractions globally.</li>
+              <li>Ensuring seamless accommodation arrangements for domestic and international tourists.</li>
+              <li>Providing comprehensive insurance solutions for travelers.</li>
+            </ol>
+          </div>
+  
+        <div class="bus-phil">
+          <h4>
+            Business Philosophy
+          </h4>
+          <p>Our guiding principle revolves around delivering outstanding service, recognizing its pivotal role in customer acquisition and retention. We strive to innovate and stay ahead of industry trends.</p>
+          <h5>Core Values</h5>
+          <p>GG Capital Travel and Tours is renowned for:</p>
+          <ol>
+            <li>Responsiveness to client and partner needs.</li>
+            <li>Uncompromising service quality and professionalism.</li>
+            <li>Reliability, dependability, and integrity.</li>
+          </ol>
+        </div>
+
+        <div class="target-audience">
+          <h4>
+            Target Audience and Product Portfolio
+          </h4>
+          <p>Our guiding principle revolves around delivering outstanding service, recognizing its pivotal role in customer acquisition and retention. We strive to innovate and stay ahead of industry trends.</p>
+          <h5>Executive Getaway Packages</h5>
+          <p>- Catering to senior executives from multinational corporations and medium-sized enterprises seeking relaxing weekend escapes and holiday retreats.</p>
+          <h5>Family Celebration Packages</h5>
+          <p>- Tailoring experiences for families and friends commemorating special milestones (anniversaries, birthdays, etc.).</p>
+        </div>
+      </div>
+    </section>
+    <section class="blogs" id="blogs">
+      <div class="coming-soon-container">
+        <h1 class="coming-soon-title">Coming Soon!</h1>
+        <p class="coming-soon-description">We're working hard to launch our new blog section. Stay tuned for updates!</p>
+        <div class="email-signup">
+            <input type="email" id="emailInput" placeholder="Enter your email for updates" class="email-input" required>
+            <button id="notifyButton" class="signup-button">Notify Me</button>
+        </div>
+        <p id="notificationMessage" class="notification"></p>
+    </div>
+    </div>    </section>
+    <sesction id="gallery">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="grid-gallery.css" media="all">
+        <title>CSS Grid</title>
+      </head>
+      
+      <body>
+      
+        <h1 style="text-align: center; justify-content: center;">Our Gallery</h1>
+        <div class="container">
+      
+          <div class="gallery-container w-3 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0031.jpg" alt="nature">
+              </div>
+            </div>
+          </div>
+      
+          <div class="gallery-container w-3 h-3">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0049.jpg" alt="food">
+              </div>
+            </div>
+          </div>
+      
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/WhatsApp Image 2024-10-18 at 18.05.49_a03161ec.jpg" alt="sport">
+              </div>
+            </div>
+          </div>
+      
+          <div class="gallery-container w-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0048.jpg" alt="">
+              </div>
+            </div>
+          </div>
+      
+          <div class="gallery-container w-4 h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0064.jpg" alt="music">
+              </div>
+            </div>
+          </div>
+      
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0062.jpg" alt="travel">
+              </div>
+            </div>
+          </div>
+      
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0032.jpg" alt="art">
+              </div>
+            </div>
+          </div>
+      
+          <div class="gallery-container w-3 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0033.jpg" alt="nature">
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0065.jpg" alt="art">
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="/assets/images/IMG-20241018-WA0056.jpg" alt="art">
+              </div>
+            </div>
+          </div>
+
+      
+        </div>
+    </sesction>
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="index.html" class="logo"
+              ><img
+                style="height: 75px; width: 150px"
+                src="assets/logo.jpg"
+                alt=""
+            /></a>
+          </div>
+          <p>
+            Explore the world's best destinations, enjoy unbeatable prices, and
+            book your perfect getaway instantly.
+          </p>
+          <h4>CONNECT WITH US</h4>
+          <ul class="footer__socials">
+            <li>
+              <a href="https://x.com/GGCaptraveltour"
+                ><i class="ri-twitter-fill"></i
+              ></a>
+            </li>
+            <li>
+              <a href="info@ggcapitaltravelandtours.com"
+                ><i class="ri-google-fill"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ggcapitaltravelandtours"
+                ><i class="ri-instagram-fill"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>QUICK LINKS</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#destination">Destinations</a></li>
+            <li><a href="#package">Packages</a></li>
+            <li><a href="/About.html">About Us</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>DESTINATIONS</h4>
+          <ul class="footer__links">
+            <li><a href="#">China</a></li>
+            <li><a href="#">Venezuela</a></li>
+            <li><a href="#">Brazil</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">London</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>OUR ACTIVITIES</h4>
+          <ul class="footer__links">
+            <li><a href="#">Trekking</a></li>
+            <li><a href="#">Peak Climbing</a></li>
+            <li><a href="#">Biking</a></li>
+            <li><a href="#">River Rafting</a></li>
+            <li><a href="#">Cultural Tour</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 Stedan and Caleb Mastery. All rights reserved.
+      </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous">
+    </script>
+
+<a href="#" class="scroll-to-top" id="scrollToTopBtn" style="display: none; color: #fff;">
+  <i class="ri-arrow-up-line"></i>
+</a>
+
+  </body>
+</html>
